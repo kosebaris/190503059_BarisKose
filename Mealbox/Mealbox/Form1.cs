@@ -21,5 +21,14 @@ namespace Mealbox
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Person personObject = new Person();
+            personObject.FirstName = textBox1.Text;
+            listBox1.Items.Add(personObject.FirstName);
+            label1.Text = personObject.FirstName;
+            
+        }
     }
 }
