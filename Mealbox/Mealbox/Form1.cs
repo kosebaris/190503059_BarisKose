@@ -28,6 +28,8 @@ namespace Mealbox
             personObject.FirstName = textBox1.Text;
             listBox1.Items.Add(personObject.FirstName);
             label1.Text = personObject.FirstName;
+
+            
             
         }
     }

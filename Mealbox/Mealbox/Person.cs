@@ -6,12 +6,28 @@ namespace Mealbox
 {
     class Person
     {
+        
+        protected string firstName;
+        protected string lastName;
+        protected string phoneNumber;
+        protected string id;
+        protected string email;
 
-        private string firstName;
-        private string lastName;
-        private string phoneNumber;
-        private string id;
-        private string email;
+        /*public Person()
+        {
+        }
+
+        public Person(string firstName, string lastName, string phoneNumber, string id, string email)
+        {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.phoneNumber = phoneNumber;
+            this.id = id;
+            this.email = email;
+            
+            
+        }*/
+
 
         public string FirstName
         {
@@ -40,8 +56,10 @@ namespace Mealbox
             get { return email; }
             set { email = value; }
         }
+        
 
 
+        
 
     }
 }
