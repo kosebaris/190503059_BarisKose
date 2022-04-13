@@ -13,7 +13,7 @@ namespace Mealbox
         private string paymentId;
 
 
-        public string id
+        public string ID
         {
             get { return id; }
             set { id = value; }

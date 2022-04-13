@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Mealbox
 {
@@ -31,6 +32,30 @@ namespace Mealbox
 
             
             
+        }
+
+
+
+        SqlConnection baglanti = new SqlConnection("Data Source = MSI\\SQLEXPRESS; Initial Catalog = db_mealbox; Integrated Security = True");
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (baglanti.State.ToString() == "Closed")
+            {
+                baglanti.Open();
+                MessageBox.Show("açık");
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            baglanti.Close();
+            MessageBox.Show("kapalı");
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(baglanti.State.ToString());
         }
     }
 }

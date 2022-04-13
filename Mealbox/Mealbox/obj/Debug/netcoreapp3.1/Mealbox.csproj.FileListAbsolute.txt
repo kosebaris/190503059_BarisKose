@@ -13,3 +13,11 @@ C:\Users\msi-nb\Documents\GitHub\Mealbox\Mealbox\Mealbox\obj\Debug\netcoreapp3.1
 C:\Users\msi-nb\Documents\GitHub\Mealbox\Mealbox\Mealbox\obj\Debug\netcoreapp3.1\Mealbox.dll
 C:\Users\msi-nb\Documents\GitHub\Mealbox\Mealbox\Mealbox\obj\Debug\netcoreapp3.1\Mealbox.pdb
 C:\Users\msi-nb\Documents\GitHub\Mealbox\Mealbox\Mealbox\obj\Debug\netcoreapp3.1\Mealbox.genruntimeconfig.cache
+C:\Users\msi-nb\Documents\GitHub\Mealbox\Mealbox\Mealbox\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\msi-nb\Documents\GitHub\Mealbox\Mealbox\Mealbox\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\msi-nb\Documents\GitHub\Mealbox\Mealbox\Mealbox\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\msi-nb\Documents\GitHub\Mealbox\Mealbox\Mealbox\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\msi-nb\Documents\GitHub\Mealbox\Mealbox\Mealbox\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\msi-nb\Documents\GitHub\Mealbox\Mealbox\Mealbox\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\msi-nb\Documents\GitHub\Mealbox\Mealbox\Mealbox\obj\Debug\netcoreapp3.1\Mealbox.csproj.CopyComplete
+C:\Users\msi-nb\Documents\GitHub\Mealbox\Mealbox\Mealbox\obj\Debug\netcoreapp3.1\Mealbox.AddProduct.resources
