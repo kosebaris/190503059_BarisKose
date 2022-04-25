@@ -4,11 +4,12 @@ using System.Text;
 
 namespace Mealbox
 {
-    class Admin
+    class Admin : Person
     {
 
         private string adminId;
         private string title;
+        private string pass;
 
         public string EmployeeId
         {
@@ -19,6 +20,11 @@ namespace Mealbox
         {
             get { return title; }
             set { title = value; }
+        }
+        public string Pass
+        {
+            get { return pass; }
+            set { pass = value; }
         }
 
 

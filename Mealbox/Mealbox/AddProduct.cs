@@ -109,5 +109,17 @@ namespace Mealbox
 
 
         }
+
+        private void AddProduct_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            MainPage frm = new MainPage();
+            this.Hide();
+            frm.Show();
+        }
     }
 }

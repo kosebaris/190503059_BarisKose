@@ -17,7 +17,7 @@ namespace Mealbox
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AddProduct());
+            Application.Run(new LoginPage());
         }
     }
 }

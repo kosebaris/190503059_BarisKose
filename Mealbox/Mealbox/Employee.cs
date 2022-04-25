@@ -9,6 +9,7 @@ namespace Mealbox
 
         private string employeeId;
         private string title;
+        private string pass;
 
         public string EmployeeId
         {
@@ -20,6 +21,12 @@ namespace Mealbox
             get { return title; }
             set { title = value; }
         }
+        public string Pass
+        {
+            get { return pass; }
+            set { pass = value; }
+        }
+
 
 
     }
