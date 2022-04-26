@@ -59,5 +59,21 @@ namespace Mealbox
             frm.Show();
 
         }
+
+        private void btn_menu_Click(object sender, EventArgs e)
+        {
+            if (label1.Text == "Admin")
+            {
+                MenuSettings frm = new MenuSettings();
+                this.Hide();
+                frm.Show();
+            }
+            else
+            {
+                MessageBox.Show("Sadece Adminler");
+            }
+        
+        }
+
     }
 }

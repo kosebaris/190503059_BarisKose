@@ -13,5 +13,8 @@
     <Compile Update="MainPage.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="MenuSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

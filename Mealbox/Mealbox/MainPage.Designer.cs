@@ -82,6 +82,7 @@ namespace Mealbox
             this.btn_menu.TabIndex = 4;
             this.btn_menu.Text = "Menu Settings";
             this.btn_menu.UseVisualStyleBackColor = true;
+            this.btn_menu.Click += new System.EventHandler(this.btn_menu_Click);
             // 
             // btn_logout
             // 

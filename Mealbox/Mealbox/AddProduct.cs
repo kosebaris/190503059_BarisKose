@@ -46,7 +46,6 @@ namespace Mealbox
 
 
 
-
         }
 
         private void dataGridView1_CellEnter(object sender, DataGridViewCellEventArgs e)
@@ -120,6 +119,11 @@ namespace Mealbox
             MainPage frm = new MainPage();
             this.Hide();
             frm.Show();
+        }
+
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
