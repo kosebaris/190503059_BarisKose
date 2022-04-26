@@ -65,6 +65,7 @@ namespace Mealbox
             // 
             // textBox_price
             // 
+            this.textBox_price.Enabled = false;
             this.textBox_price.Location = new System.Drawing.Point(141, 163);
             this.textBox_price.Name = "textBox_price";
             this.textBox_price.Size = new System.Drawing.Size(100, 23);
@@ -83,6 +84,7 @@ namespace Mealbox
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(701, 166);
             this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEnter);
             // 
             // label1
             // 
