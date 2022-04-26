@@ -57,6 +57,7 @@ namespace Mealbox
             LoginPage frm = new LoginPage();
             this.Hide();
             frm.Show();
+
         }
     }
 }
