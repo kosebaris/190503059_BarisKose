@@ -56,15 +56,15 @@ namespace Mealbox
             if (dr.Read())
             {
                 dr.Close();
-                MessageBox.Show("Admin Girişi Yapıldı");
                 
-
                 string sorgu = "UPDATE LOGGED_TABLE SET LOGGEDAS=@loggedas"; ;
                 komut = new SqlCommand(sorgu, baglanti);
                 komut.Parameters.AddWithValue("@loggedas", "Admin");
                 komut.ExecuteNonQuery();
 
                 mainpage();
+
+                MessageBox.Show("Admin Girişi Yapıldı");
             }
             else
             {
@@ -75,8 +75,6 @@ namespace Mealbox
                 if (dr.Read())
                 {
                     dr.Close();
-                    MessageBox.Show("Eleman Girişi Yapıldı");
-                    
 
                     string sorgu = "UPDATE LOGGED_TABLE SET LOGGEDAS=@loggedas"; ;
                     komut = new SqlCommand(sorgu, baglanti);
@@ -84,6 +82,8 @@ namespace Mealbox
                     komut.ExecuteNonQuery();
 
                     mainpage();
+
+                    MessageBox.Show("Eleman Girişi Yapıldı");
                 }
                 else
                 {
