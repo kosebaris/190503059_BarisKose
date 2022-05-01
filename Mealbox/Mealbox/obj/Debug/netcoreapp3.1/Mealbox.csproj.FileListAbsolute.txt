@@ -24,3 +24,4 @@ C:\Users\msi-nb\Documents\GitHub\Mealbox\Mealbox\Mealbox\obj\Debug\netcoreapp3.1
 C:\Users\msi-nb\Documents\GitHub\Mealbox\Mealbox\Mealbox\obj\Debug\netcoreapp3.1\Mealbox.LoginPage.resources
 C:\Users\msi-nb\Documents\GitHub\Mealbox\Mealbox\Mealbox\obj\Debug\netcoreapp3.1\Mealbox.MainPage.resources
 C:\Users\msi-nb\Documents\GitHub\Mealbox\Mealbox\Mealbox\obj\Debug\netcoreapp3.1\Mealbox.MenuSettings.resources
+C:\Users\msi-nb\Documents\GitHub\Mealbox\Mealbox\Mealbox\obj\Debug\netcoreapp3.1\Mealbox.ContentSettings.resources

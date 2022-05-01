@@ -64,7 +64,7 @@ namespace Mealbox
 
                 mainpage();
 
-                MessageBox.Show("Admin Girişi Yapıldı");
+                
             }
             else
             {
@@ -78,12 +78,12 @@ namespace Mealbox
 
                     string sorgu = "UPDATE LOGGED_TABLE SET LOGGEDAS=@loggedas"; ;
                     komut = new SqlCommand(sorgu, baglanti);
-                    komut.Parameters.AddWithValue("@loggedas", "Employee");
+                    komut.Parameters.AddWithValue("@loggedas", "Mitarbeiter");
                     komut.ExecuteNonQuery();
 
                     mainpage();
 
-                    MessageBox.Show("Eleman Girişi Yapıldı");
+                    
                 }
                 else
                 {

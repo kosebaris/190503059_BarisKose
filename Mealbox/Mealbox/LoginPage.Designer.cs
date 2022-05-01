@@ -56,18 +56,18 @@ namespace Mealbox
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(275, 122);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 15);
+            this.label1.Size = new System.Drawing.Size(67, 15);
             this.label1.TabIndex = 2;
-            this.label1.Text = "User ID";
+            this.label1.Text = "Benutzer ID";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(275, 179);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 15);
+            this.label2.Size = new System.Drawing.Size(54, 15);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Password";
+            this.label2.Text = "Passwort";
             // 
             // button1
             // 
@@ -75,7 +75,7 @@ namespace Mealbox
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(233, 38);
             this.button1.TabIndex = 4;
-            this.button1.Text = "Log In";
+            this.button1.Text = "Einloggen";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 

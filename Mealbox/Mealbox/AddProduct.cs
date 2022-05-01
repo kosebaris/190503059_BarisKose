@@ -125,5 +125,15 @@ namespace Mealbox
         {
             
         }
+
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+
+            textBox_name.Text = "";
+            textBox_price.Text = "";
+            textBox_description.Text = "";
+            textBox_imageurl.Text = "";
+
+        }
     }
 }
