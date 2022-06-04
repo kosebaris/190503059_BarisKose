@@ -119,7 +119,7 @@ namespace Mealbox
             komut = new SqlCommand(sorgu, baglanti);
             komut.Parameters.AddWithValue("@MENUTYPE", textBox_menutype.Text);
             komut.Parameters.AddWithValue("@MENUNO", textBox_menuno.Text);
-            komut.Parameters.AddWithValue("@PRICE", 0);
+            komut.Parameters.AddWithValue("@PRICE", textBox_price.Text);
             komut.Parameters.AddWithValue("@DESCRIPTION", textBox_description.Text);
             baglanti.Open();
             komut.ExecuteNonQuery();

@@ -56,26 +56,24 @@ namespace Mealbox
             // 
             // textBox_menutype
             // 
-            this.textBox_menutype.Location = new System.Drawing.Point(179, 74);
+            this.textBox_menutype.Location = new System.Drawing.Point(179, 63);
             this.textBox_menutype.Name = "textBox_menutype";
             this.textBox_menutype.Size = new System.Drawing.Size(100, 23);
             this.textBox_menutype.TabIndex = 0;
             // 
             // textBox_menuno
             // 
-            this.textBox_menuno.Location = new System.Drawing.Point(179, 103);
+            this.textBox_menuno.Location = new System.Drawing.Point(179, 92);
             this.textBox_menuno.Name = "textBox_menuno";
             this.textBox_menuno.Size = new System.Drawing.Size(100, 23);
             this.textBox_menuno.TabIndex = 1;
             // 
             // textBox_price
             // 
-            this.textBox_price.Enabled = false;
-            this.textBox_price.Location = new System.Drawing.Point(522, 325);
+            this.textBox_price.Location = new System.Drawing.Point(179, 152);
             this.textBox_price.Name = "textBox_price";
             this.textBox_price.Size = new System.Drawing.Size(100, 23);
             this.textBox_price.TabIndex = 2;
-            this.textBox_price.Visible = false;
             // 
             // dataGridView1
             // 
@@ -95,7 +93,7 @@ namespace Mealbox
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(85, 77);
+            this.label1.Location = new System.Drawing.Point(85, 66);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 15);
             this.label1.TabIndex = 4;
@@ -104,7 +102,7 @@ namespace Mealbox
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(85, 111);
+            this.label2.Location = new System.Drawing.Point(85, 100);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 15);
             this.label2.TabIndex = 5;
@@ -113,12 +111,11 @@ namespace Mealbox
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(428, 333);
+            this.label3.Location = new System.Drawing.Point(85, 156);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(33, 15);
             this.label3.TabIndex = 6;
             this.label3.Text = "Price";
-            this.label3.Visible = false;
             // 
             // label4
             // 
@@ -132,7 +129,7 @@ namespace Mealbox
             // 
             // btn_add
             // 
-            this.btn_add.Location = new System.Drawing.Point(508, 77);
+            this.btn_add.Location = new System.Drawing.Point(508, 66);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(89, 23);
             this.btn_add.TabIndex = 9;
@@ -142,7 +139,7 @@ namespace Mealbox
             // 
             // btn_edit
             // 
-            this.btn_edit.Location = new System.Drawing.Point(508, 121);
+            this.btn_edit.Location = new System.Drawing.Point(508, 110);
             this.btn_edit.Name = "btn_edit";
             this.btn_edit.Size = new System.Drawing.Size(89, 23);
             this.btn_edit.TabIndex = 10;
@@ -152,7 +149,7 @@ namespace Mealbox
             // 
             // btn_remove
             // 
-            this.btn_remove.Location = new System.Drawing.Point(508, 163);
+            this.btn_remove.Location = new System.Drawing.Point(508, 152);
             this.btn_remove.Name = "btn_remove";
             this.btn_remove.Size = new System.Drawing.Size(89, 23);
             this.btn_remove.TabIndex = 11;
@@ -215,7 +212,7 @@ namespace Mealbox
             // 
             // btn_clear
             // 
-            this.btn_clear.Location = new System.Drawing.Point(179, 163);
+            this.btn_clear.Location = new System.Drawing.Point(179, 181);
             this.btn_clear.Name = "btn_clear";
             this.btn_clear.Size = new System.Drawing.Size(100, 23);
             this.btn_clear.TabIndex = 18;
@@ -226,7 +223,7 @@ namespace Mealbox
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(85, 140);
+            this.label6.Location = new System.Drawing.Point(85, 129);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(75, 15);
             this.label6.TabIndex = 19;
@@ -234,7 +231,7 @@ namespace Mealbox
             // 
             // textBox_description
             // 
-            this.textBox_description.Location = new System.Drawing.Point(179, 132);
+            this.textBox_description.Location = new System.Drawing.Point(179, 121);
             this.textBox_description.Name = "textBox_description";
             this.textBox_description.Size = new System.Drawing.Size(100, 23);
             this.textBox_description.TabIndex = 20;
@@ -262,7 +259,7 @@ namespace Mealbox
             // 
             // btn_addcontent
             // 
-            this.btn_addcontent.Location = new System.Drawing.Point(612, 74);
+            this.btn_addcontent.Location = new System.Drawing.Point(612, 63);
             this.btn_addcontent.Name = "btn_addcontent";
             this.btn_addcontent.Size = new System.Drawing.Size(132, 112);
             this.btn_addcontent.TabIndex = 23;

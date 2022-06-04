@@ -42,10 +42,14 @@ namespace Mealbox
                 currentprice = currentprice - Int32.Parse(dr["PRICE"].ToString());
                 textBox_price.Text = currentprice.ToString();
 
-                listBox2.Items.Remove(listBox2.SelectedItem);
+                
                 itemsayisi--;
 
                 baglanti.Close();
+
+                contentCikar();
+
+                listBox2.Items.Remove(listBox2.SelectedItem);
             }
 
             label4.Text = itemsayisi.ToString();
@@ -69,7 +73,12 @@ namespace Mealbox
                     dr.Read();
                     currentprice = currentprice + Int32.Parse(dr["PRICE"].ToString());
                     textBox_price.Text = currentprice.ToString();
-                    
+                    baglanti.Close();
+                    //MessageBox.Show(listBox1.SelectedItem.ToString().Substring(0, 4));
+
+
+                    contentEkle();
+
 
                 }
 
@@ -85,10 +94,18 @@ namespace Mealbox
             }
 
 
-            baglanti.Close();
+            
             label4.Text = itemsayisi.ToString();
 
         }
+
+       
+
+
+
+
+
+
 
         private void btn_back_Click(object sender, EventArgs e)
         {
@@ -233,7 +250,24 @@ namespace Mealbox
 
                 
 
-            MenuGetir();
+           // MenuGetir();
+        }
+
+        public void contentCikar()
+        {
+
+            string sorgu = "DELETE FROM CONTENT_TABLE WHERE MENU_ID=@MENU_ID AND PRODUCT_ID=@PRODUCT_ID";
+            komut = new SqlCommand(sorgu, baglanti);
+            komut.Parameters.AddWithValue("@MENU_ID", Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value.ToString()));
+            //string sayi = Regex.Match(listBox2.SelectedItem.ToString(), @"\d+").Value;
+            string sayi = listBox2.SelectedItem.ToString().Substring(0, 4);
+            komut.Parameters.AddWithValue("@PRODUCT_ID", sayi);
+            baglanti.Open();
+            komut.ExecuteNonQuery();
+            baglanti.Close();
+            
+
+
         }
 
         private void btn_update_Click(object sender, EventArgs e)
@@ -248,7 +282,7 @@ namespace Mealbox
 
         private void button1_Click(object sender, EventArgs e)
         {
-            contentEkle();
+            contentCikar();
         }
     }
 }
