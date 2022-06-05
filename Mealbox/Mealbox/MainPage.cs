@@ -75,5 +75,11 @@ namespace Mealbox
         
         }
 
+        private void btn_customer_Click(object sender, EventArgs e)
+        {
+            CustomerSettings frm = new CustomerSettings();
+            this.Hide();
+            frm.Show();
+        }
     }
 }

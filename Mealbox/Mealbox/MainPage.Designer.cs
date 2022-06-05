@@ -63,6 +63,7 @@ namespace Mealbox
             this.btn_customer.TabIndex = 2;
             this.btn_customer.Text = "Kundeneinstellungen";
             this.btn_customer.UseVisualStyleBackColor = true;
+            this.btn_customer.Click += new System.EventHandler(this.btn_customer_Click);
             // 
             // btn_product
             // 
