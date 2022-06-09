@@ -132,32 +132,35 @@ namespace Mealbox
             // 
             // btn_add
             // 
+            this.btn_add.BackColor = System.Drawing.Color.Lime;
             this.btn_add.Location = new System.Drawing.Point(508, 66);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(89, 23);
             this.btn_add.TabIndex = 9;
             this.btn_add.Text = "Addieren";
-            this.btn_add.UseVisualStyleBackColor = true;
+            this.btn_add.UseVisualStyleBackColor = false;
             this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
             // btn_edit
             // 
+            this.btn_edit.BackColor = System.Drawing.Color.Yellow;
             this.btn_edit.Location = new System.Drawing.Point(508, 110);
             this.btn_edit.Name = "btn_edit";
             this.btn_edit.Size = new System.Drawing.Size(89, 23);
             this.btn_edit.TabIndex = 10;
             this.btn_edit.Text = "Aktualisieren";
-            this.btn_edit.UseVisualStyleBackColor = true;
+            this.btn_edit.UseVisualStyleBackColor = false;
             this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
             // 
             // btn_remove
             // 
+            this.btn_remove.BackColor = System.Drawing.Color.Red;
             this.btn_remove.Location = new System.Drawing.Point(508, 152);
             this.btn_remove.Name = "btn_remove";
             this.btn_remove.Size = new System.Drawing.Size(89, 23);
             this.btn_remove.TabIndex = 11;
             this.btn_remove.Text = "Löschen";
-            this.btn_remove.UseVisualStyleBackColor = true;
+            this.btn_remove.UseVisualStyleBackColor = false;
             this.btn_remove.Click += new System.EventHandler(this.btn_remove_Click);
             // 
             // button1

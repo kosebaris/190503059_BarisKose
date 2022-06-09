@@ -87,7 +87,7 @@ namespace Mealbox
                 }
                 else
                 {
-                    MessageBox.Show("Yanlış");
+                    MessageBox.Show("Fehler bei der Anmeldung");
                 }
             }
 
@@ -100,7 +100,7 @@ namespace Mealbox
 
         private void LoginPage_Load(object sender, EventArgs e)
         {
-            
+            this.Text = "Mealbox";
         }
 
         private void LoginPage_FormClosed(object sender, FormClosedEventArgs e)

@@ -57,9 +57,9 @@ namespace Mealbox
             // 
             // btn_customer
             // 
-            this.btn_customer.Location = new System.Drawing.Point(77, 80);
+            this.btn_customer.Location = new System.Drawing.Point(205, 71);
             this.btn_customer.Name = "btn_customer";
-            this.btn_customer.Size = new System.Drawing.Size(178, 59);
+            this.btn_customer.Size = new System.Drawing.Size(416, 83);
             this.btn_customer.TabIndex = 2;
             this.btn_customer.Text = "Kundeneinstellungen";
             this.btn_customer.UseVisualStyleBackColor = true;
@@ -67,9 +67,9 @@ namespace Mealbox
             // 
             // btn_product
             // 
-            this.btn_product.Location = new System.Drawing.Point(551, 80);
+            this.btn_product.Location = new System.Drawing.Point(205, 160);
             this.btn_product.Name = "btn_product";
-            this.btn_product.Size = new System.Drawing.Size(178, 59);
+            this.btn_product.Size = new System.Drawing.Size(416, 83);
             this.btn_product.TabIndex = 3;
             this.btn_product.Text = "Produkteinstellungen";
             this.btn_product.UseVisualStyleBackColor = true;
@@ -77,9 +77,9 @@ namespace Mealbox
             // 
             // btn_menu
             // 
-            this.btn_menu.Location = new System.Drawing.Point(551, 156);
+            this.btn_menu.Location = new System.Drawing.Point(205, 249);
             this.btn_menu.Name = "btn_menu";
-            this.btn_menu.Size = new System.Drawing.Size(178, 59);
+            this.btn_menu.Size = new System.Drawing.Size(416, 83);
             this.btn_menu.TabIndex = 4;
             this.btn_menu.Text = "Menüteinstellungen";
             this.btn_menu.UseVisualStyleBackColor = true;
@@ -87,7 +87,7 @@ namespace Mealbox
             // 
             // btn_logout
             // 
-            this.btn_logout.Location = new System.Drawing.Point(654, 389);
+            this.btn_logout.Location = new System.Drawing.Point(546, 372);
             this.btn_logout.Name = "btn_logout";
             this.btn_logout.Size = new System.Drawing.Size(75, 23);
             this.btn_logout.TabIndex = 5;

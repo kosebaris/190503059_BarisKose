@@ -41,8 +41,20 @@ namespace Mealbox
 
         private void AddProduct_Load(object sender, EventArgs e)
         {
+            this.Text = "Mealbox";
+
             ProductGetir();
 
+            for (int i = 0; i < dataGridView1.Columns.Count; i++)
+            {
+                dataGridView1.Columns[i].SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
+
+            dataGridView1.Columns[0].HeaderText = "ID";
+            dataGridView1.Columns[1].HeaderText = "NAME";
+            dataGridView1.Columns[2].HeaderText = "PREIS";
+            dataGridView1.Columns[3].HeaderText = "BEZEICHNUNG";
+            dataGridView1.Columns[4].HeaderText = "BILD URL";
 
 
 
@@ -77,13 +89,46 @@ namespace Mealbox
         private void button_remove_Click(object sender, EventArgs e)
         {
 
-            string sorgu = "DELETE FROM PRODUCT_TABLE WHERE ID=@ID";
-            komut = new SqlCommand(sorgu, baglanti);
-            komut.Parameters.AddWithValue("@ID", Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value.ToString()));
-            baglanti.Open();
-            komut.ExecuteNonQuery();
-            baglanti.Close();
-            ProductGetir();
+            void sil()
+            {
+
+                string sorgu = "DELETE FROM PRODUCT_TABLE WHERE ID=@ID";
+                komut = new SqlCommand(sorgu, baglanti);
+                komut.Parameters.AddWithValue("@ID", Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value.ToString()));
+                baglanti.Open();
+                komut.ExecuteNonQuery();
+                baglanti.Close();
+                ProductGetir();
+
+            }
+
+            try
+            {
+                sil();
+            }
+            catch (Exception ex)
+            {
+                DialogResult dialogResult = MessageBox.Show("Dieses Produkt ist in einem Menü enthalten. Wenn Sie es löschen, wird der Inhalt des Menüs beeinflusst. Möchtest du weiter machen?", "Warnung", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    string sorgu = "DELETE FROM CONTENT_TABLE WHERE PRODUCT_ID=@PRODUCT_ID";
+                    komut = new SqlCommand(sorgu, baglanti);
+                    komut.Parameters.AddWithValue("@PRODUCT_ID", Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value.ToString()));
+                    
+                    komut.ExecuteNonQuery();
+                    baglanti.Close();
+
+                    sil();
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    
+                    baglanti.Close();
+                }
+
+                
+            }
+            
             
 
 
@@ -92,19 +137,35 @@ namespace Mealbox
         private void button_update_Click(object sender, EventArgs e)
         {
 
-            string sorgu = "UPDATE PRODUCT_TABLE SET NAME=@NAME, PRICE=@PRICE, DESCRIPTION=@DESCRIPTION, IMAGEURL=@IMAGEURL WHERE ID=@ID"; ;
-            komut = new SqlCommand(sorgu, baglanti);
-            komut.Parameters.AddWithValue("@ID", Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value.ToString()));
+            void guncelle(){
 
-            komut.Parameters.AddWithValue("@NAME", textBox_name.Text);
-            komut.Parameters.AddWithValue("@PRICE", textBox_price.Text);
-            komut.Parameters.AddWithValue("@DESCRIPTION", textBox_description.Text);
-            komut.Parameters.AddWithValue("@IMAGEURL", textBox_imageurl.Text);
+                string sorgu = "UPDATE PRODUCT_TABLE SET NAME=@NAME, PRICE=@PRICE, DESCRIPTION=@DESCRIPTION, IMAGEURL=@IMAGEURL WHERE ID=@ID"; ;
+                komut = new SqlCommand(sorgu, baglanti);
+                komut.Parameters.AddWithValue("@ID", Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value.ToString()));
 
-            baglanti.Open();
-            komut.ExecuteNonQuery();
-            baglanti.Close();
-            ProductGetir();
+                komut.Parameters.AddWithValue("@NAME", textBox_name.Text);
+                komut.Parameters.AddWithValue("@PRICE", textBox_price.Text);
+                komut.Parameters.AddWithValue("@DESCRIPTION", textBox_description.Text);
+                komut.Parameters.AddWithValue("@IMAGEURL", textBox_imageurl.Text);
+
+                baglanti.Open();
+                komut.ExecuteNonQuery();
+                baglanti.Close();
+                ProductGetir();
+
+            }
+
+            try
+            {
+                guncelle();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                baglanti.Close();
+            }
+
+            
 
 
         }

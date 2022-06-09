@@ -112,32 +112,35 @@ namespace Mealbox
             // 
             // button_add
             // 
+            this.button_add.BackColor = System.Drawing.Color.Lime;
             this.button_add.Location = new System.Drawing.Point(642, 51);
             this.button_add.Name = "button_add";
             this.button_add.Size = new System.Drawing.Size(90, 23);
             this.button_add.TabIndex = 8;
             this.button_add.Text = "Addieren";
-            this.button_add.UseVisualStyleBackColor = true;
+            this.button_add.UseVisualStyleBackColor = false;
             this.button_add.Click += new System.EventHandler(this.button_add_Click);
             // 
             // button_remove
             // 
+            this.button_remove.BackColor = System.Drawing.Color.Red;
             this.button_remove.Location = new System.Drawing.Point(642, 134);
             this.button_remove.Name = "button_remove";
             this.button_remove.Size = new System.Drawing.Size(90, 23);
             this.button_remove.TabIndex = 9;
             this.button_remove.Text = "Löschen";
-            this.button_remove.UseVisualStyleBackColor = true;
+            this.button_remove.UseVisualStyleBackColor = false;
             this.button_remove.Click += new System.EventHandler(this.button_remove_Click);
             // 
             // button_update
             // 
+            this.button_update.BackColor = System.Drawing.Color.Yellow;
             this.button_update.Location = new System.Drawing.Point(642, 94);
             this.button_update.Name = "button_update";
             this.button_update.Size = new System.Drawing.Size(90, 23);
             this.button_update.TabIndex = 10;
             this.button_update.Text = "Aktualisieren";
-            this.button_update.UseVisualStyleBackColor = true;
+            this.button_update.UseVisualStyleBackColor = false;
             this.button_update.Click += new System.EventHandler(this.button_update_Click);
             // 
             // dataGridView1

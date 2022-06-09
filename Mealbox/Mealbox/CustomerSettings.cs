@@ -61,10 +61,29 @@ namespace Mealbox
 
         private void CustomerSettings_Load(object sender, EventArgs e)
         {
+            this.Text = "Mealbox";
+
             MusteriGetir();
             listBox1.Items.Clear();
             ListboxDoldur();
-            
+
+            for (int i = 0; i < dataGridView1.Columns.Count; i++)
+            {
+                dataGridView1.Columns[i].SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
+
+            dataGridView1.Columns[0].HeaderText = "ID";
+            dataGridView1.Columns[1].HeaderText = "VORNAME";
+            dataGridView1.Columns[2].HeaderText = "NACHNAME";
+            dataGridView1.Columns[3].HeaderText = "MOBIL";
+            dataGridView1.Columns[4].HeaderText = "EMAIL";
+            dataGridView1.Columns[5].HeaderText = "KARTEN-NR";
+            dataGridView1.Columns[6].HeaderText = "AUSGEWÄHLTES MENÜ";
+
+            dataGridView1.Columns[0].Width = 30;
+            dataGridView1.Columns[4].Width = 150;
+            dataGridView1.Columns[5].Width = 90;
+            dataGridView1.Columns[6].Width = 140;
 
         }
 
@@ -128,6 +147,37 @@ namespace Mealbox
             komut.Parameters.AddWithValue("@EMAIL", textBox_email.Text);
             komut.Parameters.AddWithValue("@KART", textBox_kart.Text);
             komut.Parameters.AddWithValue("@SELECTEDMENU", listBox1.SelectedItem.ToString());
+            baglanti.Open();
+            komut.ExecuteNonQuery();
+            baglanti.Close();
+            MusteriGetir();
+        }
+
+        private void button_update_Click(object sender, EventArgs e)
+        {
+            string sorgu = "UPDATE CUSTOMER_TABLE SET FIRSTNAME=@FIRSTNAME, LASTNAME=@LASTNAME, PHONENUMBER=@PHONENUMBER, EMAIL=@EMAIL, KART=@KART, SELECTEDMENU=@SELECTEDMENU WHERE ID=@ID"; ;
+            komut = new SqlCommand(sorgu, baglanti);
+            komut.Parameters.AddWithValue("@ID", Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value.ToString()));
+
+            komut.Parameters.AddWithValue("@FIRSTNAME", textBox_name.Text);
+            komut.Parameters.AddWithValue("@LASTNAME", textBox_lastname.Text);
+            komut.Parameters.AddWithValue("@PHONENUMBER", textBox_mobile.Text);
+            komut.Parameters.AddWithValue("@EMAIL", textBox_email.Text);
+            komut.Parameters.AddWithValue("@KART", textBox_kart.Text);
+            komut.Parameters.AddWithValue("@SELECTEDMENU", listBox1.SelectedItem.ToString());
+
+            baglanti.Open();
+            komut.ExecuteNonQuery();
+            baglanti.Close();
+            MusteriGetir();
+        }
+
+        private void button_remove_Click(object sender, EventArgs e)
+        {
+            string sorgu = "DELETE FROM CUSTOMER_TABLE WHERE ID=@ID";
+            komut = new SqlCommand(sorgu, baglanti);
+            komut.Parameters.AddWithValue("@ID", Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value.ToString()));
+
             baglanti.Open();
             komut.ExecuteNonQuery();
             baglanti.Close();

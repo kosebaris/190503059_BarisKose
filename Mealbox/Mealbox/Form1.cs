@@ -43,14 +43,14 @@ namespace Mealbox
             if (baglanti.State.ToString() == "Closed")
             {
                 baglanti.Open();
-                MessageBox.Show("açık");
+                MessageBox.Show("Open");
             }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             baglanti.Close();
-            MessageBox.Show("kapalı");
+            MessageBox.Show("Close");
         }
 
         private void button4_Click(object sender, EventArgs e)

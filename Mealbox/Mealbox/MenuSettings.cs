@@ -90,10 +90,24 @@ namespace Mealbox
 
         private void MenuSettings_Load(object sender, EventArgs e)
         {
+            this.Text = "Mealbox";
+
             listBox1.Items.Clear();
             listBox3.Items.Clear();
             MenuGetir();
             ProductNameGetir();
+
+            for (int i = 0; i < dataGridView1.Columns.Count; i++)
+            {
+                dataGridView1.Columns[i].SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
+
+            dataGridView1.Columns[0].HeaderText = "ID";
+            dataGridView1.Columns[1].HeaderText = "MENÜTYP";
+            dataGridView1.Columns[2].HeaderText = "MENÜ NO";
+            dataGridView1.Columns[3].HeaderText = "PREIS";
+            dataGridView1.Columns[4].HeaderText = "BEZEICHNUNG";
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -357,13 +371,27 @@ namespace Mealbox
 
         private void btn_remove_Click(object sender, EventArgs e)
         {
-            string sorgu = "DELETE FROM MENU_TABLE WHERE ID=@ID";
-            komut = new SqlCommand(sorgu, baglanti);
-            komut.Parameters.AddWithValue("@ID", Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value.ToString()));
-            baglanti.Open();
-            komut.ExecuteNonQuery();
-            baglanti.Close();
-            MenuGetir();
+            void sil()
+            {
+                string sorgu = "DELETE FROM MENU_TABLE WHERE ID=@ID";
+                komut = new SqlCommand(sorgu, baglanti);
+                komut.Parameters.AddWithValue("@ID", Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value.ToString()));
+                baglanti.Open();
+                komut.ExecuteNonQuery();
+                baglanti.Close();
+                MenuGetir();
+            }
+
+            try
+            {
+                sil();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Es gibt einen Kunden, der dieses Menü wählt.Sie müssen die Auswahl des Kunden ändern, bevor Sie ihn löschen.", "Warnung");
+                baglanti.Close();
+            }
+
         }
 
         private void btn_edit_Click(object sender, EventArgs e)

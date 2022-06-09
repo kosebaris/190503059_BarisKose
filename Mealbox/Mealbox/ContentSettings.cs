@@ -116,10 +116,24 @@ namespace Mealbox
 
         private void ContentSettings_Load(object sender, EventArgs e)
         {
+            this.Text = "Mealbox";
+
             listBox1.Items.Clear();
             listBox2.Items.Clear();
             MenuGetir();
             ProductNameGetir();
+
+            for (int i = 0; i < dataGridView1.Columns.Count; i++)
+            {
+                dataGridView1.Columns[i].SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
+
+            dataGridView1.Columns[0].HeaderText = "ID";
+            dataGridView1.Columns[1].HeaderText = "MENÜTYP";
+            dataGridView1.Columns[2].HeaderText = "MENÜ NO";
+            dataGridView1.Columns[3].HeaderText = "PREIS";
+            dataGridView1.Columns[4].HeaderText = "BEZEICHNUNG";
+
         }
 
         void MenuGetir()

@@ -28,6 +28,8 @@ namespace Mealbox
 
         private void MainPage_Load(object sender, EventArgs e)
         {
+            this.Text = "Mealbox";
+
             baglanti = new SqlConnection("Data Source = MSI\\SQLEXPRESS; Initial Catalog = db_mealbox; Integrated Security = True");
             komut = new SqlCommand("SELECT * FROM LOGGED_TABLE", baglanti);
             baglanti.Open();
@@ -70,7 +72,7 @@ namespace Mealbox
             }
             else
             {
-                MessageBox.Show("Sadece Adminler");
+                MessageBox.Show("Sie sind nicht zugriffsberechtigt");
             }
         
         }
