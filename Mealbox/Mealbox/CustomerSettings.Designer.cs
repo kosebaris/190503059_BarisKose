@@ -46,6 +46,8 @@ namespace Mealbox
             this.label5 = new System.Windows.Forms.Label();
             this.textBox_kart = new System.Windows.Forms.TextBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.textBox_adres = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +59,7 @@ namespace Mealbox
             this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(61, 231);
+            this.dataGridView1.Location = new System.Drawing.Point(61, 259);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -69,7 +71,7 @@ namespace Mealbox
             // 
             // btn_clear
             // 
-            this.btn_clear.Location = new System.Drawing.Point(226, 187);
+            this.btn_clear.Location = new System.Drawing.Point(226, 216);
             this.btn_clear.Name = "btn_clear";
             this.btn_clear.Size = new System.Drawing.Size(75, 23);
             this.btn_clear.TabIndex = 25;
@@ -83,7 +85,7 @@ namespace Mealbox
             this.button_update.Location = new System.Drawing.Point(657, 92);
             this.button_update.Name = "button_update";
             this.button_update.Size = new System.Drawing.Size(90, 23);
-            this.button_update.TabIndex = 24;
+            this.button_update.TabIndex = 23;
             this.button_update.Text = "Aktualisieren";
             this.button_update.UseVisualStyleBackColor = false;
             this.button_update.Click += new System.EventHandler(this.button_update_Click);
@@ -94,7 +96,7 @@ namespace Mealbox
             this.button_remove.Location = new System.Drawing.Point(657, 132);
             this.button_remove.Name = "button_remove";
             this.button_remove.Size = new System.Drawing.Size(90, 23);
-            this.button_remove.TabIndex = 23;
+            this.button_remove.TabIndex = 24;
             this.button_remove.Text = "Löschen";
             this.button_remove.UseVisualStyleBackColor = false;
             this.button_remove.Click += new System.EventHandler(this.button_remove_Click);
@@ -176,7 +178,7 @@ namespace Mealbox
             // 
             // btn_back
             // 
-            this.btn_back.Location = new System.Drawing.Point(672, 387);
+            this.btn_back.Location = new System.Drawing.Point(672, 415);
             this.btn_back.Name = "btn_back";
             this.btn_back.Size = new System.Drawing.Size(75, 23);
             this.btn_back.TabIndex = 26;
@@ -198,7 +200,7 @@ namespace Mealbox
             this.textBox_kart.Location = new System.Drawing.Point(136, 158);
             this.textBox_kart.Name = "textBox_kart";
             this.textBox_kart.Size = new System.Drawing.Size(165, 23);
-            this.textBox_kart.TabIndex = 28;
+            this.textBox_kart.TabIndex = 18;
             // 
             // listBox1
             // 
@@ -210,11 +212,29 @@ namespace Mealbox
             this.listBox1.Sorted = true;
             this.listBox1.TabIndex = 29;
             // 
+            // textBox_adres
+            // 
+            this.textBox_adres.Location = new System.Drawing.Point(136, 187);
+            this.textBox_adres.Name = "textBox_adres";
+            this.textBox_adres.Size = new System.Drawing.Size(165, 23);
+            this.textBox_adres.TabIndex = 19;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(61, 193);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(48, 15);
+            this.label6.TabIndex = 31;
+            this.label6.Text = "Adresse";
+            // 
             // CustomerSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox_adres);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.textBox_kart);
             this.Controls.Add(this.label5);
@@ -262,5 +282,7 @@ namespace Mealbox
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox_kart;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.TextBox textBox_adres;
+        private System.Windows.Forms.Label label6;
     }
 }

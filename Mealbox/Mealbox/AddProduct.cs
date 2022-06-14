@@ -196,5 +196,23 @@ namespace Mealbox
             textBox_imageurl.Text = "";
 
         }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+            try
+            {
+                var uri = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+                var psi = new System.Diagnostics.ProcessStartInfo();
+                psi.UseShellExecute = true;
+                psi.FileName = uri;
+                System.Diagnostics.Process.Start(psi);
+            }
+            catch
+            {
+
+
+            }
+        }
     }
 }
