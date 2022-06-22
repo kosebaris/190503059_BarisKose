@@ -83,5 +83,21 @@ namespace Mealbox
             this.Hide();
             frm.Show();
         }
+
+        private void btn_employee_Click(object sender, EventArgs e)
+        {
+
+            if (label1.Text == "Admin")
+            {
+                EmployeeSettings frm = new EmployeeSettings();
+                this.Hide();
+                frm.Show();
+            }
+            else
+            {
+                MessageBox.Show("Sie sind nicht zugriffsberechtigt");
+            }
+  
+        }
     }
 }

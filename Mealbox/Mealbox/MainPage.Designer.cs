@@ -35,6 +35,7 @@ namespace Mealbox
             this.btn_product = new System.Windows.Forms.Button();
             this.btn_menu = new System.Windows.Forms.Button();
             this.btn_logout = new System.Windows.Forms.Button();
+            this.btn_employee = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -57,9 +58,9 @@ namespace Mealbox
             // 
             // btn_customer
             // 
-            this.btn_customer.Location = new System.Drawing.Point(205, 71);
+            this.btn_customer.Location = new System.Drawing.Point(130, 110);
             this.btn_customer.Name = "btn_customer";
-            this.btn_customer.Size = new System.Drawing.Size(416, 83);
+            this.btn_customer.Size = new System.Drawing.Size(280, 83);
             this.btn_customer.TabIndex = 2;
             this.btn_customer.Text = "Kundeneinstellungen";
             this.btn_customer.UseVisualStyleBackColor = true;
@@ -67,9 +68,9 @@ namespace Mealbox
             // 
             // btn_product
             // 
-            this.btn_product.Location = new System.Drawing.Point(205, 160);
+            this.btn_product.Location = new System.Drawing.Point(416, 110);
             this.btn_product.Name = "btn_product";
-            this.btn_product.Size = new System.Drawing.Size(416, 83);
+            this.btn_product.Size = new System.Drawing.Size(280, 83);
             this.btn_product.TabIndex = 3;
             this.btn_product.Text = "Produkteinstellungen";
             this.btn_product.UseVisualStyleBackColor = true;
@@ -77,29 +78,40 @@ namespace Mealbox
             // 
             // btn_menu
             // 
-            this.btn_menu.Location = new System.Drawing.Point(205, 249);
+            this.btn_menu.Location = new System.Drawing.Point(416, 199);
             this.btn_menu.Name = "btn_menu";
-            this.btn_menu.Size = new System.Drawing.Size(416, 83);
-            this.btn_menu.TabIndex = 4;
+            this.btn_menu.Size = new System.Drawing.Size(280, 83);
+            this.btn_menu.TabIndex = 5;
             this.btn_menu.Text = "Menüteinstellungen";
             this.btn_menu.UseVisualStyleBackColor = true;
             this.btn_menu.Click += new System.EventHandler(this.btn_menu_Click);
             // 
             // btn_logout
             // 
-            this.btn_logout.Location = new System.Drawing.Point(546, 372);
+            this.btn_logout.Location = new System.Drawing.Point(621, 367);
             this.btn_logout.Name = "btn_logout";
             this.btn_logout.Size = new System.Drawing.Size(75, 23);
-            this.btn_logout.TabIndex = 5;
+            this.btn_logout.TabIndex = 6;
             this.btn_logout.Text = "Ausloggen";
             this.btn_logout.UseVisualStyleBackColor = true;
             this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
+            // 
+            // btn_employee
+            // 
+            this.btn_employee.Location = new System.Drawing.Point(130, 199);
+            this.btn_employee.Name = "btn_employee";
+            this.btn_employee.Size = new System.Drawing.Size(280, 83);
+            this.btn_employee.TabIndex = 4;
+            this.btn_employee.Text = "Benutzereinstellungen";
+            this.btn_employee.UseVisualStyleBackColor = true;
+            this.btn_employee.Click += new System.EventHandler(this.btn_employee_Click);
             // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(807, 450);
+            this.Controls.Add(this.btn_employee);
             this.Controls.Add(this.btn_logout);
             this.Controls.Add(this.btn_menu);
             this.Controls.Add(this.btn_product);
@@ -124,5 +136,6 @@ namespace Mealbox
         private System.Windows.Forms.Button btn_product;
         private System.Windows.Forms.Button btn_menu;
         private System.Windows.Forms.Button btn_logout;
+        private System.Windows.Forms.Button btn_employee;
     }
 }

@@ -235,22 +235,40 @@ namespace Mealbox
 
         private void button_update_Click(object sender, EventArgs e)
         {
-            string sorgu = "UPDATE CUSTOMER_TABLE SET FIRSTNAME=@FIRSTNAME, LASTNAME=@LASTNAME, PHONENUMBER=@PHONENUMBER, EMAIL=@EMAIL, KART=@KART, ADDRESS=@ADDRESS, SELECTEDMENU=@SELECTEDMENU WHERE ID=@ID"; ;
-            komut = new SqlCommand(sorgu, baglanti);
-            komut.Parameters.AddWithValue("@ID", Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value.ToString()));
 
-            komut.Parameters.AddWithValue("@FIRSTNAME", textBox_name.Text);
-            komut.Parameters.AddWithValue("@LASTNAME", textBox_lastname.Text);
-            komut.Parameters.AddWithValue("@PHONENUMBER", textBox_mobile.Text);
-            komut.Parameters.AddWithValue("@EMAIL", textBox_email.Text);
-            komut.Parameters.AddWithValue("@KART", textBox_kart.Text);
-            komut.Parameters.AddWithValue("@ADDRESS", textBox_adres.Text);
-            komut.Parameters.AddWithValue("@SELECTEDMENU", listBox1.SelectedItem.ToString());
+            if (textBox_mobile.Text.Length == 10)
+            {
+                if (IsValidEmail(textBox_email.Text))
+                {
+                    string sorgu = "UPDATE CUSTOMER_TABLE SET FIRSTNAME=@FIRSTNAME, LASTNAME=@LASTNAME, PHONENUMBER=@PHONENUMBER, EMAIL=@EMAIL, KART=@KART, ADDRESS=@ADDRESS, SELECTEDMENU=@SELECTEDMENU WHERE ID=@ID"; ;
+                    komut = new SqlCommand(sorgu, baglanti);
+                    komut.Parameters.AddWithValue("@ID", Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value.ToString()));
 
-            baglanti.Open();
-            komut.ExecuteNonQuery();
-            baglanti.Close();
-            MusteriGetir();
+                    komut.Parameters.AddWithValue("@FIRSTNAME", textBox_name.Text);
+                    komut.Parameters.AddWithValue("@LASTNAME", textBox_lastname.Text);
+                    komut.Parameters.AddWithValue("@PHONENUMBER", textBox_mobile.Text);
+                    komut.Parameters.AddWithValue("@EMAIL", textBox_email.Text);
+                    komut.Parameters.AddWithValue("@KART", textBox_kart.Text);
+                    komut.Parameters.AddWithValue("@ADDRESS", textBox_adres.Text);
+                    komut.Parameters.AddWithValue("@SELECTEDMENU", listBox1.SelectedItem.ToString());
+
+                    baglanti.Open();
+                    komut.ExecuteNonQuery();
+                    baglanti.Close();
+                    MusteriGetir();
+                }
+                else
+                {
+                    MessageBox.Show("Bitte geben Sie eine gültige E-Mail-Adresse ein.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Die Telefonnummer muss 10-stellig sein.");
+            }
+
+
+            
         }
 
         private void button_remove_Click(object sender, EventArgs e)
@@ -264,5 +282,10 @@ namespace Mealbox
             baglanti.Close();
             MusteriGetir();
         }
+
+
+        
+
+
     }
 }
