@@ -1,0 +1,11 @@
+C:\Users\msi-nb\Documents\GitHub\Mealbox\Mealbox\Mealbox\bin\Release\netcoreapp3.1\publish\Mealbox.exe
+C:\Users\msi-nb\Documents\GitHub\Mealbox\Mealbox\Mealbox\bin\Release\netcoreapp3.1\publish\Mealbox.dll
+C:\Users\msi-nb\Documents\GitHub\Mealbox\Mealbox\Mealbox\bin\Release\netcoreapp3.1\publish\Mealbox.deps.json
+C:\Users\msi-nb\Documents\GitHub\Mealbox\Mealbox\Mealbox\bin\Release\netcoreapp3.1\publish\Mealbox.runtimeconfig.json
+C:\Users\msi-nb\Documents\GitHub\Mealbox\Mealbox\Mealbox\bin\Release\netcoreapp3.1\publish\Mealbox.pdb
+C:\Users\msi-nb\Documents\GitHub\Mealbox\Mealbox\Mealbox\bin\Release\netcoreapp3.1\publish\System.Data.SqlClient.dll
+C:\Users\msi-nb\Documents\GitHub\Mealbox\Mealbox\Mealbox\bin\Release\netcoreapp3.1\publish\runtimes\win-arm64\native\sni.dll
+C:\Users\msi-nb\Documents\GitHub\Mealbox\Mealbox\Mealbox\bin\Release\netcoreapp3.1\publish\runtimes\win-x64\native\sni.dll
+C:\Users\msi-nb\Documents\GitHub\Mealbox\Mealbox\Mealbox\bin\Release\netcoreapp3.1\publish\runtimes\win-x86\native\sni.dll
+C:\Users\msi-nb\Documents\GitHub\Mealbox\Mealbox\Mealbox\bin\Release\netcoreapp3.1\publish\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\msi-nb\Documents\GitHub\Mealbox\Mealbox\Mealbox\bin\Release\netcoreapp3.1\publish\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

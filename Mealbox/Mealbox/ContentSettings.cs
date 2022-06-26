@@ -84,7 +84,7 @@ namespace Mealbox
 
                 else
                 {
-                    MessageBox.Show("Bu ürün zaten mevcut");
+                    MessageBox.Show("Dieses Produkt ist bereits verfügbar.");
                 }
 
             }
